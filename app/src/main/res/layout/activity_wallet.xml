@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grad_ee"
+    android:orientation="vertical"
+    tools:context=".activity.WalletActivity">
+
+    <include
+        layout="@layout/toolbar_layout" />
+
+   <android.support.v4.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <android.support.constraint.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:paddingBottom="16dp">
+
+           <View
+               android:id="@+id/view1"
+               android:layout_width="match_parent"
+               android:layout_height="124dp"
+               android:background="@color/colorAccent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+
+
+           <TextView
+               android:id="@+id/text1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="16dp"
+               android:layout_marginTop="22dp"
+               android:text="金币金额"
+               android:textColor="@color/white"
+               android:textSize="11dp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="@+id/view1" />
+
+
+           <TextView
+               android:id="@+id/wallet_text_amount"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="16dp"
+               android:layout_marginTop="8dp"
+               android:text="00"
+               android:textColor="@color/white"
+               android:textSize="22dp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/text1" />
+
+           <ImageView
+               android:id="@+id/image1"
+               android:layout_width="11.5dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="4dp"
+               android:layout_marginBottom="5dp"
+               android:adjustViewBounds="true"
+               android:src="@mipmap/gold_icon"
+               app:layout_constraintBottom_toBottomOf="@+id/wallet_text_amount"
+               app:layout_constraintStart_toEndOf="@+id/wallet_text_amount" />
+
+
+           <TextView
+               android:id="@+id/wallet_text_toTask"
+               android:layout_width="72dp"
+               android:layout_height="29dp"
+               android:layout_marginEnd="16dp"
+               android:background="@drawable/white_stroke1"
+               android:gravity="center"
+               android:text="去赚钱"
+               android:textColor="@color/white"
+               app:layout_constraintBottom_toBottomOf="@+id/wallet_text_amount"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="@+id/text1" />
+
+
+           <LinearLayout
+               android:id="@+id/layout"
+               android:layout_width="0dp"
+               android:layout_height="514dp"
+               android:layout_marginStart="16dp"
+               android:layout_marginTop="28dp"
+               android:layout_marginEnd="16dp"
+               android:orientation="vertical"
+               android:background="@drawable/radius4_white_bg"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/wallet_text_amount">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="12dp"
+                   android:textColor="@color/black"
+                   android:text="金币明细"
+                   android:layout_marginLeft="16dp"
+                   android:layout_marginTop="18dp"
+                   android:layout_marginBottom="10dp"/>
+
+
+               <android.support.v7.widget.RecyclerView
+                   android:id="@+id/wallet_recyclerView_incomelist"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"/>
+
+           </LinearLayout>
+
+       </android.support.constraint.ConstraintLayout>
+
+   </android.support.v4.widget.NestedScrollView>
+
+
+
+</LinearLayout>

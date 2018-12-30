@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/take_item_image"
+        android:layout_width="37.5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/take_image_signin_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/take_item_takeName"
+        app:layout_constraintStart_toEndOf="@+id/take_item_image"
+        app:layout_constraintTop_toTopOf="@+id/take_item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="签到任务"
+        android:textColor="@color/black"
+        android:textSize="12dp" />
+
+
+    <ImageView
+        android:id="@+id/take_item_image_goldIcon"
+        app:layout_constraintBottom_toBottomOf="@+id/take_item_image"
+        app:layout_constraintStart_toEndOf="@+id/take_item_image"
+        android:layout_width="11.5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/gold_icon" />
+
+    <TextView
+        android:id="@+id/take_item_text_goldNum"
+        app:layout_constraintBottom_toBottomOf="@+id/take_item_image_goldIcon"
+        app:layout_constraintStart_toEndOf="@+id/take_item_image_goldIcon"
+        app:layout_constraintTop_toTopOf="@+id/take_item_image_goldIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="+X金币/个"
+        android:textColor="@color/gold"
+        android:textSize="10.5dp" />
+
+
+    <TextView
+        android:id="@+id/take_text_describe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/take_item_image_goldIcon"
+        app:layout_constraintTop_toBottomOf="@+id/take_item_image_goldIcon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="描述"
+        android:textColor="@color/grad_99"
+        android:textSize="10.5dp" />
+
+
+    <com.universal.universal_tv.ui.customView.TakeCheckTextView
+        android:id="@+id/take_text_checked"
+        android:layout_width="77.5dp"
+        android:layout_height="24.5dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/take_checked_bg"
+        android:checked="false"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/take_check_text_view"
+        android:textSize="11.5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/take_item_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/take_item_image"
+        app:tct_checkedText="已签到"
+        app:tct_urCheckedText="去签到" />
+
+
+    <View
+        android:id="@+id/line1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/take_text_describe"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/grad_99" />
+
+</android.support.constraint.ConstraintLayout>

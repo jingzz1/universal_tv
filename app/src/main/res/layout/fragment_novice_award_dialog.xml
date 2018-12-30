@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dialog.NoviceAwardDialog">
+
+
+    <FrameLayout
+        android:layout_width="288dp"
+        android:layout_height="173dp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="6dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/noviceAwardDialog_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:text="新手奖励"
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+
+
+                <TextView
+                    android:id="@+id/noviceAwardDialog_context"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="28dp"
+                    android:text="新会员注册奖励：20金币，金币可兑换特权哦！"
+                    android:textColor="@color/grad_24"
+                    android:textSize="13dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/noviceAwardDialog_title" />
+
+
+                <TextView
+                    android:id="@+id/noviceAwardDialog_toRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/novice_award_dialog_button_bg"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="立即注册领取"
+                    android:textColor="@color/white"
+                    android:textSize="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/noviceAwardDialog_cancel"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/noviceAwardDialog_context" />
+
+                <TextView
+                    android:id="@+id/noviceAwardDialog_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="32dp"
+                    android:background="@drawable/novice_award_dialog_button_bg"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="看看再说"
+                    android:textColor="@color/white"
+                    android:textSize="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/noviceAwardDialog_toRegister"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/noviceAwardDialog_toRegister"
+                    app:layout_constraintTop_toTopOf="@+id/noviceAwardDialog_toRegister" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </FrameLayout>
+
+</FrameLayout>

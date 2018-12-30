@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="67dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/convert_place_item_image"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/convert_place_item_context"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="说明"
+        android:textColor="@color/black"
+        android:textSize="11.5dp"
+        app:layout_constraintEnd_toStartOf="@+id/convert_place_item_checked"
+        app:layout_constraintStart_toEndOf="@+id/convert_place_item_image"
+        app:layout_constraintTop_toTopOf="@+id/convert_place_item_image" />
+
+    <CheckedTextView
+        android:id="@+id/convert_place_item_checked"
+        android:layout_width="87dp"
+        android:layout_height="24.5dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/take_checked_bg"
+        android:textColor="@color/take_check_text_view"
+        android:checked="true"
+        android:textSize="11.5dp"
+        android:text="到期剩余时间"
+        android:textAlignment="center"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="12dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/gold_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/convert_place_item_image"
+        app:layout_constraintStart_toEndOf="@+id/convert_place_item_image" />
+
+
+    <TextView
+        android:id="@+id/convert_place_item_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:text="+10金币/个"
+        android:textColor="@color/gold"
+        android:textSize="10.5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/image1"
+        app:layout_constraintEnd_toStartOf="@+id/convert_place_item_checked"
+        app:layout_constraintStart_toEndOf="@+id/image1"
+        app:layout_constraintTop_toTopOf="@+id/image1" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/grad_f0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

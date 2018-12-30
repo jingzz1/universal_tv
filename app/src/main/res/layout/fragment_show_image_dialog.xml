@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dialog.ShowImageDialog">
+
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="400dp">
+
+        <com.universal.universal_tv.ui.customView.ZoomImageView
+            android:id="@+id/showImage_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+</FrameLayout>
